@@ -1,4 +1,35 @@
 
+.contact-component {
+  animation-name: load-contact;
+  animation-duration: 1.5s;
+}
+
+.portfolio-component {
+  animation-name: load-portfolio;
+  animation-duration: 1.5s;
+}
+
+@keyframes load-contact {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes load-portfolio {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 @media(max-width: 600px) {
   .main-container {
