@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import './App.css'
 import Contact from './components/Contact';
+import Portfolio from './components/Portfolio';
 
 function App() {
 
@@ -14,6 +15,8 @@ function App() {
         <Contact />
 
         <div className='flex flex-col w-full'>
+
+          <Portfolio setData={setData} />
 
         </div>
 

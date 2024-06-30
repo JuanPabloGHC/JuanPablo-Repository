@@ -11,6 +11,7 @@ export default {
         'components': '#158AAC',
         'subcomponents': '#DBDCD6',
         'texts': '#1F363C',
+        'portfolioS': '#52B69A',
       }
     },
   },
