@@ -1,4 +1,5 @@
 import { FaPhone, FaEnvelope, FaSearchLocation, FaLinkedin, FaGithub } from "react-icons/fa";
+import { TbFileCv } from "react-icons/tb";
 
 import JP from "../images/JP.jpeg";
 
@@ -31,6 +32,9 @@ const Contact = () => {
                     </a>
                     <a href="https://github.com/JuanPabloGHC">
                         <FaGithub color="#1F363C" className="w-16 h-16 p-2 hover:p-1"/>
+                    </a>
+                    <a href="">
+                        <TbFileCv color="#1F363C" className="w-16 h-16 p-2 hover:p-1"/>
                     </a>
                 </div>
 

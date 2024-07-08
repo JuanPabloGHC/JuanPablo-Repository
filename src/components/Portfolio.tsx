@@ -10,29 +10,29 @@ interface Props {
 const Portfolio = ( { setData }: Props ) => {
 
     const [bgColorAbout, setBgColorAbout] = useState<string>("bg-portfolioS");
-    const [bgColorEducation, setBgColorEducation] = useState<string>("bg-subcomponents");
-    const [bgColorWorks, setBgColorWorks] = useState<string>("bg-subcomponents");
+    const [bgColorCertificates, setBgColorCertificates] = useState<string>("bg-subcomponents");
+    const [bgColorProjects, setBgColorProjects] = useState<string>("bg-subcomponents");
     const [bgColorExperience, setBgColorExperience] = useState<string>("bg-subcomponents");
 
 
 
     const ChangeColor = (buttonId: string) => {
         setBgColorAbout("bg-subcomponents")
-        setBgColorEducation("bg-subcomponents")
-        setBgColorWorks("bg-subcomponents")
+        setBgColorCertificates("bg-subcomponents")
+        setBgColorProjects("bg-subcomponents")
         setBgColorExperience("bg-subcomponents")
 
         switch(buttonId) {
             case 'a':
                 setBgColorAbout("bg-portfolioS")
                 break;
+            case 'c':
+                setBgColorCertificates("bg-portfolioS")
+                break;
+            case 'p':
+                setBgColorProjects("bg-portfolioS")
+                break;
             case 'e':
-                setBgColorEducation("bg-portfolioS")
-                break;
-            case 'w':
-                setBgColorWorks("bg-portfolioS")
-                break;
-            case 'x':
                 setBgColorExperience("bg-portfolioS")
                 break;
         }
@@ -42,7 +42,7 @@ const Portfolio = ( { setData }: Props ) => {
 
     return (
         
-        <div className="portfolio-component rounded-lg shadow-lg bg-components">
+        <menu className="portfolio-component rounded-lg shadow-lg bg-components">
         
             {/* ABOUT */}
             <button id='a' 
@@ -52,18 +52,18 @@ const Portfolio = ( { setData }: Props ) => {
                 <h2 className='font-bold' >About</h2>
             </button>
 
-            {/* EDUCATION */}
+            {/* CERTIFICATES */}
             <button id='e' 
-            className={`flex flex-col items-center rounded-lg ${bgColorEducation} m-2 p-2 space-y-1 w-24 hover:text-sm`}
-            onClick={() => ChangeColor('e')}>
+            className={`flex flex-col items-center rounded-lg ${bgColorCertificates} m-2 p-2 space-y-1 w-24 hover:text-sm`}
+            onClick={() => ChangeColor('c')}>
                 <PiCertificateFill className='w-8 h-8'/>
                 <h2 className='font-bold' >Certificates</h2>
             </button>
 
-            {/* WORKS */}
+            {/* PROJECTS */}
             <button id='w' 
-            className={`flex flex-col items-center rounded-lg ${bgColorWorks} m-2 p-2 space-y-1 w-24 hover:text-sm`}
-            onClick={() => ChangeColor('w')}>
+            className={`flex flex-col items-center rounded-lg ${bgColorProjects} m-2 p-2 space-y-1 w-24 hover:text-sm`}
+            onClick={() => ChangeColor('p')}>
                 <PiDevicesFill className='w-8 h-8'/>
                 <h2 className='font-bold' >Projects</h2>
             </button>
@@ -71,12 +71,12 @@ const Portfolio = ( { setData }: Props ) => {
             {/* CONTACT */}
             <button id='c' 
             className={`flex flex-col items-center rounded-lg ${bgColorExperience} m-2 p-2 space-y-1 w-24 hover:text-sm`}
-            onClick={() => ChangeColor('x')}>
+            onClick={() => ChangeColor('e')}>
                 <MdWork className='w-8 h-8'/>
                 <h2 className='font-bold' >Experience</h2>
             </button>
 
-        </div>
+        </menu>
 
     );
 

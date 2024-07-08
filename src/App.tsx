@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import Contact from './components/Contact';
 import Portfolio from './components/Portfolio';
+import Data from './components/Data';
 
 function App() {
 
@@ -18,6 +19,8 @@ function App() {
 
           <Portfolio setData={setData} />
 
+          <Data data={data} />
+
         </div>
 
       </div>
@@ -25,4 +28,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

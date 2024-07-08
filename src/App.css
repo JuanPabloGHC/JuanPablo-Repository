@@ -2,11 +2,19 @@
 .contact-component {
   animation-name: load-contact;
   animation-duration: 1.5s;
+  animation-timing-function: linear;
 }
 
 .portfolio-component {
   animation-name: load-portfolio;
   animation-duration: 1.5s;
+  animation-timing-function: linear;
+}
+
+.data-component {
+  animation-name: load-data;
+  animation-duration: 2s;
+  animation-timing-function: linear;
 }
 
 @keyframes load-contact {
@@ -28,6 +36,21 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes load-data {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  75% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -73,6 +96,41 @@
     padding: 0.5rem;
   }
 
+  /* DATA */
+  .data-component {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hr-element {
+      margin-right: 0.5rem;
+  }
+  .text-element {
+      font-size: 1rem;
+  }
+  .language-element {
+      width: 16.666667%;
+  }
+  .education-element {
+      flex-direction: column;
+  }
+  .education-card {
+      width: 100%;
+      margin-top: 12px;
+  }
+  .experience-element {
+      margin-top: 10px;
+      font-size: 20px;
+  }
+  .modal-element {
+      width: 100%;
+  }
+  .modal-title {
+      font-size: 15px;
+  }
+  .modal-description {
+      font-size: 12px;
+  }
+
 }
 
 @media(min-width: 600px) {
@@ -116,4 +174,73 @@
     padding: 1.5rem;
   }
 
+  /* DATA */
+  .data-component {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+  .hr-element {
+      margin-right: 2.5rem;
+  }
+  .text-element {
+      font-size: 1.25rem;
+  }
+  .language-element {
+      width: 20%;
+  }
+  .education-element {
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+  .education-card {
+      width: 100%;
+      margin-top: 12px;
+  }
+  .experience-element {
+      font-size: 30px;
+  }
+  .modal-element {
+      width: 75%;
+  }
+  .modal-button {
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+      border-radius: 6px;
+      border: 2;
+  }
+  .modal-title {
+      font-size: 30px;
+  }
+  .modal-description {
+      font-size: 16px;
+  }
+
+}
+
+/* LANGUAGES BAR */
+@media(min-width: 1200px) {
+  .language-element {
+      width: 8.333333%;
+  }
+
+  .image-decoration {
+      height: 10rem;
+  }
+}
+
+/* EDUCATION ELEMENTS & MODAL */
+@media(min-width: 1300px) {
+  .education-element {
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+  .education-card {
+      width: 48%;
+      margin-right: 2px;
+  }
+
+  .modal-element {
+      width: 50%;
+  }
 }
